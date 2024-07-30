@@ -1,0 +1,619 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Courgette&family=Lobster&family=Pacifico&display=swap');
+
+:root{
+    --color-barra-lateral:rgb(255,255,255);
+
+    --color-texto:rgb(0,0,0);
+    --color-texto-menu: rgb(255, 255, 255);
+    /*desiganammos colores para cuando pase el mause cambie de color "horver"*/
+    --color-hover-a: rgb(197, 197, 197) ;
+    --color-hover-texto-a:rgb(0,0,0);
+    /*color del boton para añadir usuarios*/
+    --color-boton:rgb(0,0,0);
+    --color-boton-texto:rgb(255,255,255);
+    /*color de la linea de separacion*/
+    --color-liena:rgb(255, 255, 255);
+    /*color del boton desplegable*/
+    --color-switch-base:rgb(179, 179, 179);
+    --color-switch-circulo:rgb(241, 241, 241);
+    /*color scrollbar del menu*/
+    --color-scrollbar:rgb(255, 255, 255);
+    --color-scrollbar-horver:rgb(0, 0, 0);
+
+    /*color del boton hover*/
+    --color-btn-hover: rgb(255, 253, 253);
+    --color-btn-text-hover: rgb(0,0,0);
+    --color-btn-border-hover: rgb(0,0,0);
+    /*color de fondo */
+    --color-fondo:#ffffff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Concert One', sans-serif;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: #F2F1F8;;
+    transition: background-color 0.5s ease;
+}
+/*_------------------------menun*/
+.menu{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    font-size: 28px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    right: 15px;
+    top:  15px;
+    background-color: var(--color-boton);
+    color: var(--color-boton-texto);
+    z-index: 100;
+}
+/*------------------barra lateral*/
+.barra_lateral{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    height: 100%;
+    padding: 20px 15px;
+    background-color:  rgb(19, 209, 209);
+    overflow: hidden;
+    transition: width 0.5s ease, left 0.5s ease;
+    z-index: 50;
+    border-right: 2px solid black ;
+}
+
+.mini_barra_lateral{
+    width: 80px;
+}
+.barra_lateral span{
+    white-space: nowrap;
+    font-size: 20px;
+    text-align: left;
+    opacity: 1;
+    transition: opacity 0.5s ease, width 0.5s ease;
+}
+.barra_lateral span.oculto{
+    opacity: 0;
+    width: 0;
+}
+/*--------------------nombre de la pagina*/
+.barra_lateral .nombre_pagina{
+    width: 100%;
+    height: 45px;
+    color: var(--color-texto);
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.barra_lateral .nombre_pagina i{
+    min-width: 50px;
+    height: 45px;
+    font-size: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.barra_lateral .nombre_pagina span{
+    margin-left: 5px;
+    font-size: 25px;
+}
+/*-----------------------estilo boton*/
+.barra_lateral a{
+    text-decoration: none;
+}
+.barra_lateral .btn{
+    cursor: pointer;
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--color-boton);
+    color: var(--color-boton-texto);
+    margin-bottom: 30px;
+}
+.barra_lateral .btn:hover{
+    background-color: var(--color-btn-hover);
+    color: var(--color-btn-text-hover);
+    border: 2px solid var(--color-btn-border-hover);
+}
+.barra_lateral .btn i{
+    min-width: 50px;
+    font-size: 25px;
+}
+
+
+/*------------------------menu de navegacion*/
+.barra_lateral .navegacion{
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.barra_lateral .navegacion::-webkit-scrollbar{
+    width: 4px;
+}
+.barra_lateral .navegacion::-webkit-scrollbar-thumb{
+    background-color: var(--color-scrollbar);
+    border-radius: 5px;
+}
+.barra_lateral .navegacion::-webkit-scrollbar-thumb:hover{
+    background-color: var(--color-scrollbar-horver);
+}
+
+.barra_lateral .navegacion li,
+.barra_lateral .cerrar_sesion li{
+    list-style: none;
+    display: flex;
+    margin-bottom: 20px;
+}
+.barra_lateral .navegacion a,
+.barra_lateral .cerrar_sesion a{
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    color: var(--color-texto-menu);
+}
+.barra_lateral .navegacion a:hover,
+.barra_lateral .cerrar_sesion a:hover{
+    background-color: var(--color-hover-a);
+    color: var(--color-hover-texto-a);
+}
+.barra_lateral .navegacion i,
+.barra_lateral .cerrar_sesion i{
+    min-width: 50px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*-------------------linea de divicion*/
+.barra_lateral .linea_divicion{
+    width: 100%;
+    height: 4px;
+    background-color: var(--color-liena);
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+/*--------------------------------contenido despues de la barra de menu*/
+.contenido{
+    width: calc(100% - 300px);
+    margin-left: 300px;
+    transition: margin-left 0.5s ease, width 0.5s ease;
+    position: relative;
+    min-height: 100%;
+}
+.contenido.min_main{
+    margin-left: 80px;
+    width: calc(100% - 80px);
+    
+}
+
+/*-------------------------------encabezado - hearder*/
+.contenido header{
+    background-color: rgb(19, 209, 209);
+    width: 100%;
+    height: 130px;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+.contenido header img{
+    max-width: 100%;
+    height: 80px;
+}
+.contenido header .img_1{
+    margin-left: 2rem;
+}
+.contenido header .img_2{
+    margin-right: 2rem;
+}
+.contenido header small{
+    font-size: 20px;
+}
+
+
+/*---------------------------main*/
+
+.sub_tit {
+    padding: 1.3rem 1rem;
+    text-align: center;
+    color: var(--color-texto);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    grid-gap: 1rem;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+/*tabla de reclamaciones-------------------------------------------------------------------*/
+
+.page-content {
+    padding: 1rem;
+    background: #f1f4f9;
+    transition: all 0.5s ease;
+}
+.records {
+    box-shadow: 0px 5px 5px -5px rgb(0 0 0 / 10%);
+    background: #fff;
+    border-radius: 3px;
+}
+
+.table-responsive {
+    width: 100%;
+    overflow: auto;
+}
+
+table {
+    border-collapse: collapse;
+    transition: all 0.5s ease;
+}
+
+table thead tr {
+    background: #d7d9db;
+}
+
+table thead th {
+    padding: 1rem 0rem;
+    text-align: left;
+    color: #343434;
+    font-size: 1rem;
+}
+
+table thead th:first-child {
+    padding-left: 1rem;
+}
+
+table tbody td {
+    padding: 1rem 0rem;
+    color: #444;
+}
+table tbody td:first-child {
+    padding-left: 1rem;
+    font-weight: 600;
+    font-size: .9rem;
+}
+
+table tbody tr {
+    border-bottom: 1px solid #c2c5c9;
+}
+
+.client-info h4 {
+    color: #3a3a3a;
+    font-size: 1.1rem;
+}
+
+.client-info small {
+    color: #777;
+    font-size: .9rem;
+}
+.actions {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 0.5rem;
+}
+.actions button{
+    padding: .1rem;
+    width: 60%;
+    border: 1px solid rgb(33, 194, 33);
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    color: rgb(33, 194, 33);
+    cursor: pointer;
+    transition: all 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.actions button i{
+    width: 30px;
+    height: 20px;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.actions form button{
+    color: red;
+    border: 1px solid red;
+}
+.actions button:hover{
+    background-color: rgb(33, 194, 33);
+    color: white;
+}
+.actions form button:hover{
+    background-color: rgb(255, 0, 0);
+}
+/*apartado del pupou para ver las reclamaciones*/
+.popup_reclamo{
+    background-color: rgb(0, 0, 0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 51;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: left 0.5s ease;
+    visibility: hidden;
+}
+.popup_reclamo.mostrar{
+    visibility: visible;
+}
+.popup_reclamo .cont_popup_reclamo{
+    position: absolute;
+    width: 50%;
+    background-color: #f1f4f9;
+    border-radius: 10px;
+    padding: 1rem;
+    overflow: hidden;
+
+    transition: 0.5s ease all;
+	transform: scale(0.7);
+    opacity: 0;
+}
+.popup_reclamo .cont_popup_reclamo.mostrar{
+    transform: scale(1); 
+    opacity: 1;
+}
+/*boton de cerrar el popup de reclamacion*/
+.popup_reclamo .cerrar_popup_reclamo{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+/*vista de la fecha de creacion del reclamo*/
+.popup_reclamo .fecha_registro{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:auto;
+    background-color: black;
+    color: white;
+    border-bottom-right-radius: 15px;
+    padding: 0.7rem;
+}
+.popup_reclamo .p_reclamo{
+    padding: 0.5rem;
+    display: grid;
+    grid-gap: 0.5rem;
+}
+.popup_reclamo .p_reclamo h2{
+    padding: 0.5rem;
+    text-align: center;
+}
+.popup_reclamo .p_reclamo h3{
+    border: 2px solid #109090;
+    border-style: dashed;
+    padding: 0.5rem;
+}
+.popup_reclamo .p_reclamo .des_reclamo:nth-of-type(1),
+.popup_reclamo .p_reclamo .des_reclamo:nth-of-type(3){
+    display: flex;
+    grid-gap: 1rem;
+}
+.popup_reclamo .p_reclamo .des_reclamo:nth-of-type(4){
+    display: grid;
+    grid-gap: 1rem;
+}
+.popup_reclamo .p_reclamo .seguro_dni{
+    width: 50%;
+    border: 1px solid rgb(125, 125, 125);
+    border-radius: 5px ;
+    padding: 0.2rem 0.2rem 0.2rem 2rem;
+    background-color: white;
+}
+.popup_reclamo .p_reclamo .des_reclamo:nth-of-type(2),
+.popup_reclamo .p_reclamo .tef_gmail{
+    border: 1px solid rgb(125, 125, 125);
+    border-radius: 5px ;
+    padding: 0.3rem;
+    background-color: white;
+}
+.popup_reclamo .p_reclamo .tef_gmail:nth-of-type(1){
+    width: 35%;
+}
+.popup_reclamo .p_reclamo .tef_gmail:nth-of-type(2){
+    width: 65%;
+}
+.popup_reclamo .p_reclamo .causa_reclamo{
+    display: flex;
+    grid-gap: 0.5rem;
+}
+.popup_reclamo .p_reclamo .causa_reclamo .descrip{
+    width: 20%;
+}
+.popup_reclamo .p_reclamo .causa_reclamo .descrip_cont{
+    width: 80%;
+    border: 1px solid rgb(125, 125, 125);
+    border-radius: 5px ;
+    padding: 0.3rem;
+    background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------responsive para el header del contenido*/
+@media only screen and (max-width: 1073px) {
+    .contenido header{
+        display: none;
+    }
+}
+@media only screen and (max-width: 1261px) {
+    .cont_reclamo:nth-of-type(1){
+        width: 20%;
+    }
+    .cont_reclamo_vista:nth-of-type(1){
+        width: 20%;
+    }
+    .cont_reclamo:nth-of-type(2){
+        width: 40%;
+    }
+    .cont_reclamo_vista:nth-of-type(2){
+        width: 40%;
+    }
+    .cont_reclamo:nth-of-type(3),
+    .cont_reclamo_vista:nth-of-type(3){
+        width: 40%;
+    }
+}
+@media only screen and (max-width: 1030px) {
+    .cont_reclamo:nth-of-type(1){
+        width: 22%;
+    }
+    .cont_reclamo_vista:nth-of-type(1){
+        width: 22%;
+    }
+    .cont_reclamo:nth-of-type(2){
+        width: 33%;
+    }
+    .cont_reclamo_vista:nth-of-type(2){
+        width: 33%;
+    }
+    .cont_reclamo:nth-of-type(3),
+    .cont_reclamo_vista:nth-of-type(3){
+        width: 45%;
+    }
+}
+@media only screen and (max-width: 1210px){
+    .popup_reclamo .cont_popup_reclamo{
+        width: 60%;
+    }
+}
+@media only screen and (max-width: 1010px){
+    .popup_reclamo .cont_popup_reclamo{
+        width: 70%;
+    }
+}
+@media only screen and (max-width: 860px){
+    .popup_reclamo .cont_popup_reclamo{
+        width: 90%;
+    }
+}
+@media only screen and (max-width: 670px){
+    .popup_reclamo .cont_popup_reclamo{
+        width: 100%;
+    }
+}
+/*-----------------------------------responsive*/
+@media (max-height: 660px){
+    .barra_lateral .nombre_pagina{
+        margin-bottom: 5px;
+    }
+    .barra_lateral .modo_oscuro,
+    .barra_lateral .linea_divicion{
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+    .barra_lateral .usuario{
+        margin-top: 1px;
+    }
+}
+@media (max-width:650px){
+    .barra_lateral{
+        position: fixed;
+        left: -300px;
+    }
+    .menu{
+        display: flex;
+    }
+    /*el max_barra_lateral se utilizara para que se vuelva a mostrar la barra de menu*/
+    .max_barra_lateral{
+        left:0;
+    }
+    /*este codigo nos permitira cambiar de icono del menu*/
+    .menu i:nth-child(2){
+        display: none;
+    }
+    .contenido {
+        margin-left: 0;
+        width: 100%;
+    }
+    .contenido.min_main{
+        margin-left: 0;
+        width: 100%;
+    }
+}
+.text-left{
+    text-align: left!important;
+}
+.btn-pdf{
+    color: red;
+}
+.options{
+    text-align: left!important;
+    padding: .5rem;
+    font-size: 16px;
+    display: flex;
+}
+.options .form-group{
+    display: flex;
+}
+.options>*{
+    display: none;
+}
+.options .btn-search{
+    display: block;
+    margin-left: .5rem;
+}
+.options .btn-search button{
+    background: rgb(7, 216, 94);
+    padding: .5rem 1rem;
+    color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: .2rem;
+    cursor: pointer;
+}
+.options .btn-search button:hover{
+    opacity: .8;
+}
+.show {
+    display: block!important;
+}

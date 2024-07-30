@@ -1,0 +1,1212 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Protest+Revolution&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Protest+Revolution&family=Protest+Riot&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Pacifico&family=Protest+Revolution&family=Protest+Riot&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rowdies:wght@300;400;700&family=Workbench&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #F2F1F8;
+}
+/*------------------------------------------------------------encavezaod superior*/
+.encabezado{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.cont_encavezado{
+    display: flex;
+    grid-gap: 1rem;
+    padding: 1.25rem 2rem;
+    background-color: #f1f4f9;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+.cont_encavezado .cont_img img {
+    width: 80px;
+    box-shadow: 0px 5px 5px -5px rgb(0 0 0 / 10%);
+    background: #fff;
+    border-radius: 5px;
+    padding: 0.2rem;
+}
+.cont_encavezado .cont_nom {
+    box-shadow: 0px 5px 5px -5px rgb(0 0 0 / 10%);
+    background: #fff;
+    border-radius: 5px;
+    padding: 0.5rem;
+    font-family: "Pacifico", cursive;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 20px;
+}
+.cont_encavezado .cont_en{
+    height: 80px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 5px 5px -5px rgb(0 0 0 / 10%);
+    background: #fff;
+    border-radius: 5px;
+}
+.cont_encavezado .cont_en a{
+    text-decoration: none;
+    color: rgb(22, 226, 226);
+}
+.cont_encavezado .cont_en i{
+    min-width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+.cont_encavezado .cont_en .cont_encabe{
+    width: 100%;
+    height: 55px;
+    font-family: "Pacifico", cursive;
+}
+/*apartado del responsive donde se genara un boton de submenu*/
+.sub_menu{
+    padding: 1.25rem 2rem;
+    background-color: #f1f4f9;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid black;
+    display: none;
+}
+.encabezado .sub_menu i{
+    background-color: #fff;
+    font-size: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px -5px rgb(0 0 0 / 10%);
+    height: 100%;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+/*-----------------------------------------------------------------------barra de menu*/
+header{
+    position: sticky;
+    padding: .5rem 1rem;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;/* esto se activa si deseamos el cambio de color segun baja el raton
+    background-color: rgba(255, 255, 255, 0); Fondo transparente al principio 
+    transition: background-color 0.5s ease; Transición suave para el color de fondo */
+}/*
+header.solid {
+    background-color: rgba(18, 157, 157, 0.5); /* Color sólido cuando se haga scroll
+}*/
+.cont_menu {
+    padding: .5rem 1rem;
+    flex: 1;
+    font-family: "Protest Riot", sans-serif;
+    display: flex;
+    align-items: center;
+    grid-gap: 1rem;
+}
+.cont_menu a{
+    text-decoration: none;
+    color: black;
+}
+.cont_menu .libro,
+.cont_menu .acceso{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+
+}
+.cont_menu .libro a,
+.cont_menu .acceso a{
+    border-radius: 8px;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 5px 5px -5px rgb(0 0 0 / 10%);
+    transition: all 0.5s ease;
+}
+.cont_menu .libro a i,
+.cont_menu .acceso a i{
+    min-width: 45px;
+    height: 45px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cont_menu .acceso a span{
+    min-width: 80px;
+    font-size: 20px;
+    padding-left:0.50rem ;
+}
+.cont_menu .libro a span{
+    min-width: 200px;
+    font-size: 17.5px;
+    padding-left: 0.6rem;
+}
+.cont_menu .libro a:hover,
+.cont_menu .acceso a:hover{
+    background-color: rgb(9, 177, 177);
+    color: white;
+}
+/*contenido de la navegacion*/
+.cont_menu nav{
+    width: 60%;
+    grid-gap: 0.5rem;
+    display: flex;
+}
+.cont_menu nav a{
+    width: 120px;
+    padding: .8rem 1rem;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 5px 5px -5px rgb(0 0 0 / 10%);
+    transition: all 0.5s ease;
+}
+.cont_menu nav a:nth-of-type(1){
+    background-color:rgb(28, 201, 201);
+    color: #fff;
+}
+.cont_menu nav a:nth-of-type(1):hover{
+    background-color:rgb(122, 238, 238);
+}
+.cont_menu nav a:hover{
+    background-color: rgb(28, 201, 201);
+    color: #fff;
+}
+
+
+/*primera parte del index imganes con movimiento y nombre*/
+.slider-frame {
+    width: 100%;
+    height: 72.5vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-frame ul {
+    display: flex;
+    padding: 0;
+    width: 400%;
+    transition: margin-left 1s;
+    height: 100%;
+}   
+
+.slider-frame ul .img {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+}
+.slider-frame ul #img1{
+    background: url(../img/slidres/slider4.jpg) no-repeat;
+    background-size: cover;
+}
+.slider-frame ul #img2{
+    background: url(../img/slidres/slider3.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.slider-frame ul #img3{
+    background: url(../img/slidres/slider2.jpg) no-repeat;
+    background-size: cover;
+}
+.slider-frame ul #img4{
+    background: url(../img/slidres/slider1.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.slider-frame img {
+    width: 100%;
+}
+.control-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+    background-color: rgb(0, 0, 0,0.3);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+}
+.control-btn:hover{
+    background-color: aliceblue;
+    color: black;
+}
+.prev-btn {
+    left: 10px;
+}
+.next-btn {
+    right: 10px;
+}
+/*---------------------------nuevo apartado que se realizo para para los servicios que ofrece la pagina*/
+.opcion_pagina{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+.opcion_pagina .cont_opcion_pagina{
+    width: 85%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 1rem;
+    width: 85%;
+}
+.opcion_pagina .cont_opcion_pagina .opcion_escogemos{
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    color: #000000;
+    grid-gap: .5rem;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 5px 5px -5px rgb(0 0 0 / 10%);
+    transition: all 0.5s ease;
+}
+.opcion_pagina .cont_opcion_pagina .opcion_escogemos:hover{
+    transform: translateY(-10%);
+}
+.opcion_pagina .cont_opcion_pagina .opcion_escogemos i,
+.opcion_pagina .cont_opcion_pagina .opcion_escogemos img{
+    min-width: 80px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    margin-top: 10px;
+}
+.opcion_pagina .cont_opcion_pagina a h3{
+    margin-bottom: 10px;
+}
+/*apartado de los modals  de las opciones */
+
+.modal_flujograma,
+.modal_enlaces,
+.modal_horario{
+    background-color: rgba(146, 143, 143, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 52;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: left 0.5s ease;
+    visibility: hidden;
+}
+.modal_flujograma.mostrar,
+.modal_enlaces.mostrar,
+.modal_horario.mostrar{
+    visibility: visible;
+}
+.modal_flujograma .cont_modal_flujograma,
+.modal_enlaces .cont_modal_enlaces,
+.modal_horario .cont_modal_horario{
+    position: absolute;
+    background-color: #f1f4f9;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 0.5rem;
+
+    transition: 0.5s ease all;
+	transform: scale(0.7);
+    opacity: 0;
+}
+.modal_flujograma .cont_modal_flujograma{
+    width: 37%;
+    height: 95%;
+    transition: all 0.5s ease;
+}
+.modal_flujograma .cont_modal_flujograma h3{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.modal_flujograma .cont_modal_flujograma img{
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(130, 129, 129);
+}
+/*modal de los enlaces que veremos.*/
+.modal_enlaces .cont_modal_enlaces{
+    width: 60%;
+    height: auto;
+    transition: all 0.5s ease;
+}
+.modal_enlaces .cont_modal_enlaces .cont_enlaces{
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+    display: grid;
+    grid-gap: 0.7rem;
+    grid-template-columns: repeat(4,1fr);
+    transition: all 0.5s ease;
+}
+.modal_enlaces .cont_modal_enlaces .cont_enlaces a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal_enlaces .cont_modal_enlaces .cont_enlaces a img{
+    width: 100%;
+    transition: all 0.5s ease;
+    box-shadow: 0 0 10px rgb(130, 129, 129);
+}
+.modal_enlaces .cont_modal_enlaces .cont_enlaces a img:hover{
+    transform: scale(1.2);
+}
+/*modal del horario de atenciones*/
+
+.modal_horario .cont_modal_horario{
+    width: 50%;
+    transition: all 0.5s ease;
+}
+.modal_horario .cont_modal_horario h3{
+    padding: 0.5rem;
+    text-align: center;
+}
+.modal_horario .cont_modal_horario table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.modal_horario .cont_modal_horario th, .modal_horario .cont_modal_horario td {
+    border: 1px solid #109090;
+    padding: 8px;
+    text-align: center;
+}
+.modal_horario .cont_modal_horario th {
+    background-color: rgb(28, 201, 201);
+}
+
+.modal_flujograma .cont_modal_flujograma.mostrar,
+.modal_enlaces .cont_modal_enlaces.mostrar,
+.modal_horario .cont_modal_horario.mostrar{
+    transform: scale(1); 
+    opacity: 1;
+}
+.modal_flujograma .cont_modal_flujograma .cerrar_modal_flujograma,
+.modal_enlaces .cont_modal_enlaces .cerrar_modal_enlaces,
+.modal_horario .cont_modal_horario .cerrar_modal_horario{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/*segunda parte contendra informacion del centro de salud - descripcion*/
+.info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+.info .cont_info{
+    width: 85%;
+    display: flex;
+    grid-gap: 1rem;
+}
+.info .cont_info .cont_info_text{
+    width: 65%;
+    padding: 1rem;
+}
+.info .cont_info .cont_info_text h1{
+    text-align: center;
+    font-family: "Rowdies", sans-serif;
+    margin-bottom: 20px;
+}
+.info .cont_info .cont_info_text p{
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.info .cont_info .cont_info_text .btn_conoce{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+.info .cont_info .cont_info_text .btn_conoce a{
+    background-color: rgb(28, 201, 201);
+    padding: 0.3rem;
+    text-decoration: none;
+    color: #ffffff;
+    border-radius: 5px;
+    font-family: "Protest Riot", sans-serif;
+    box-shadow: 0px 5px 5px -5px rgb(0 0 0 / 10%);
+    transition: all 0.5s ease;
+}
+.info .cont_info .cont_info_text .btn_conoce a:hover{
+    background-color: white;
+    color: black;
+}
+.info .cont_info .cont_info_img{
+    width: 35%;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.info .cont_info .cont_info_img .img-director{
+    grid-gap: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    width: 350px;
+    background-color: white;
+    box-shadow: 0 0 10px rgb(130, 129, 129);
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+.info .cont_info .cont_info_img img{
+    border: 2px solid blue;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+}
+/*------------------------en esta parte tendremos mas info del CSMC tayacaja*/
+
+.estadistica .tit_esta {
+    font-family: "Rowdies", sans-serif;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 30px;
+}
+.estadistica .cont_esta{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.estadistica .cont_esta .cont_estadis_descrip{
+    width: 85%;
+    padding: 1rem;
+    display: flex;
+    grid-gap: 1rem;
+}
+.estadistica .cont_esta .cont_estadis_descrip .contestades1{
+    width: 35%;
+    background-color: white;
+    box-shadow: 0 0 10px rgb(130, 129, 129);
+    border-radius: 15px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+.estadistica .cont_esta .cont_estadis_descrip .contestades1:hover .cont_img_icon i{
+    color: rgb(41, 170, 170);
+    background-color: rgb(255, 255, 255);
+}
+.estadistica .cont_esta .cont_estadis_descrip .contestades1 .cont_img_icon{
+    width: 100%;
+    position: relative;
+}
+.estadistica .cont_esta .cont_estadis_descrip .contestades1 .cont_img_icon img{
+    width: 100%;
+    height: 15vw;
+    object-fit: cover; 
+}
+.estadistica .cont_esta .cont_estadis_descrip .contestades1 .cont_img_icon i{
+    min-width: 65px;
+    border: 4px solid white;
+    height: 65px;
+    position: absolute;
+    background-color: rgb(41, 170, 170);
+    color: white;
+    border-radius: 50%;
+    left: calc(50% - 30px);
+    bottom: -30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    transition: all .5s ease;
+}
+.estadistica .cont_esta .cont_estadis_descrip .contestades1 h3{
+    margin-top: 30px;
+    padding: .5rem;
+    text-align: center;
+}
+.estadistica .cont_esta .cont_estadis_descrip .contestades1 p{
+    text-align: justify;
+    width: 90%;
+    margin-bottom: 20px;
+}
+.estadistica .cont_esta .cont_estadis_descrip .contestades2{
+    width: 65%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgb(130, 129, 129);
+    border-radius: 15px;
+    padding: 0.5rem;
+}
+.estadistica .cont_esta .cont_estadis_descrip .contestades2 span{
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.estadistica .cont_esta .cont_estadis_descrip .contestades2 img{
+    width: 100%;
+}
+
+/*---------------------------------------------tercera parte contendra informacion del presonal*/
+
+.personal .sub_tit_personal{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    padding: 1rem;
+    font-family: "Rowdies", sans-serif;
+}
+.personal .cont_personal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.personal .cont_personal .servicos{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 1rem;
+    padding: 1rem;
+    width: 85%;
+}
+.personal .cont_personal .servicios_cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-gap: 1rem;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgb(130, 129, 129);
+    transition: all .5s ease;
+}
+.personal .cont_personal .servicios_cont:hover{
+    transform: translateY(-5%);
+    box-shadow: 5px 5px 5px rgb(48, 48, 48);
+}
+.personal .cont_personal .servicios_cont img{
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+.personal .cont_personal .servicios_cont .text_personal{
+    font-size: 20px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+.personal .cont_personal .servicios_cont a{
+    text-decoration: none;
+    color: black;
+}
+.personal .cont_personal .servicios_cont .leer_mas{
+    padding: 5px 10px;
+    border-radius: 7px;
+    margin-bottom: 15px;
+    background-color: rgb(28, 201, 201) ;
+    color: white;
+    transition: all 0.5s ease;
+}
+.personal .cont_personal .servicios_cont .leer_mas:hover{
+    background-color: rgb(40, 255, 237);
+    color: #105157;
+}
+
+/*-------------esta es la seccion que contendra a los videos de ayuda al paciente*/
+
+.seccion_videos .tit_videos{
+    font-family: "Rowdies", sans-serif;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    text-align: center;
+}
+.seccion_videos .contvideos{
+    justify-content: center;
+    display: flex;
+}
+.seccion_videos .contvideos .contvideo{
+    width: 85%;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+}
+.seccion_videos .contvideos .contvideo .video{
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 0 10px rgb(130, 129, 129);
+}
+.seccion_videos .contvideos .contvideo .video iframe{
+    width: 100%;
+    height: 30vh;
+}
+.seccion_videos .contvideos .contvideo .video .tit_video{
+    text-align: center;
+    margin: 8px 0 10px 0;
+}
+.seccion_videos .contvideos .contvideo .video .ver_video{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.seccion_videos .contvideos .contvideo .video .ver_video h3{
+    background-color:rgb(28, 201, 201) ;
+    padding: .5rem;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.seccion_videos .contvideos .contvideo .video .ver_video h3:hover{
+    background-color: rgb(0, 255, 234);
+    color: #105157;
+}
+/*------------------------modal para ver videos de forma flotante*/
+.seccion_videos .contvideos .modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 52;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: left 0.5s ease;
+    background-color: rgb(0, 0, 0, .5);
+    visibility: hidden;
+}
+.seccion_videos .contvideos .modal.mostrar_video{
+    visibility: visible;
+}
+ .contvideos .modal .video_expandido{
+    position: absolute;
+    width: 80%;
+    height: 90%;
+    background-color: #f1f4f9;
+    border-radius: 15px;
+    overflow: hidden;
+
+    transition: 0.5s ease all;
+	transform: scale(0.7);
+    opacity: 0;   
+}
+.contvideos .modal .video_expandido.mostrar_video{
+    transform: scale(1); 
+    opacity: 1;
+}
+/*--------------------------------estilo del modal para cerrar la ventana flotante que se abre*/
+.contvideos .modal .video_expandido .cerrar_video{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #109090;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 5px 5px -5px rgb(0 0 0 / 10%);
+}
+ .contvideos .modal .video_expandido .cerrar_video:hover{
+    background-color: rgb(0, 255, 234);
+    color: #105157;
+}
+/*----------------------------estilo del modal del video y su tituilo*/
+.seccion_videos .contvideos .modal .video_expandido iframe{
+   width: 100%;
+   height: 100%;
+}
+/*--------------------- estilos de la parte de como ubiacion del CSMC */
+.ubicacion{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.ubicacion .tit_ubicacion{
+    font-family: "Rowdies", sans-serif;
+    padding: 1rem;
+    text-align: center;
+    font-size: 30px;
+}
+.ubicacion .ubc_info{
+    display: flex;
+    width: 85%;
+    grid-gap: 1rem;
+    padding: 1rem;
+}
+.ubicacion .ubc_info .ubic{
+    width: 50%;
+    text-align: center;
+    display: grid;
+    grid-gap: .5rem;
+}
+
+.ubicacion .ubc_info .ubic span{
+    font-size: 25px;
+    font-weight: bold;
+    padding: 1rem;
+}
+.ubicacion .ubc_info .ubic iframe{
+    width: 100%;
+    height: 500px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgb(130, 129, 129);
+}
+.ubicacion .ubc_info .ubic2{
+    display: flex;
+    justify-content: center;
+    grid-gap: 1rem;
+    flex-direction: column;
+    width: 50%;
+    padding: 1rem;
+}
+.ubicacion .ubc_info .ubic2 .ubic_cont{
+    padding: 1rem;
+
+}
+/*------------------------la parte de piede de la pagina*/
+footer{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.fin_pag{
+    width: 97.5%;
+    background-color: white;
+    box-shadow: 0px 5px 5px -5px rgb(0 0 0 / 10%);
+    padding: 1rem;
+    border-bottom: 1px solid black;
+    display: flex;
+    grid-gap: 1rem;
+    justify-content: space-between;
+}
+.fin_pag .cont_fin1{
+    width: 40%;
+    display: grid;
+    grid-gap: 1rem;
+}
+.fin_pag .cont_fin1 .cont_fin_img{
+    display: flex;
+    padding: 0 1rem 0 1rem;
+}
+.fin_pag .cont_fin1 .cont_fin_img img{
+    width: 15%;
+}
+.fin_pag .cont_fin1 .cont_fin_img .cont_fin_img1{
+    margin-left: 20px;
+    width: 100%;
+    font-size: 15px;
+    font-family: "Pacifico", cursive;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.fin_pag .cont_fin1 p{
+    padding: 0 1rem 0 1rem;
+}
+.fin_pag .cont_fin1 .fin_links{
+    display: flex;
+    grid-gap: 2rem ;
+    padding: 0 0 0 1rem;
+}
+.fin_pag .cont_fin1 .fin_links a{
+    min-width: 45px;
+    height: 40px;
+    display: flex;
+    font-size: 25px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 7px;
+    background-color: rgb(31, 221, 221);
+}
+.fin_pag .cont_fin1 .fin_links a:nth-of-type(1){
+    background-color: #405e9e;
+    color: white;
+}
+.fin_pag .cont_fin1 .fin_links a:nth-of-type(2){
+    background-color: #00acee;
+    color: white;
+}
+.fin_pag .cont_fin1 .fin_links a:nth-of-type(3){
+    background: linear-gradient(to right, #833ab4, #fd1d1d);
+    color: white;
+    font-size: 30px;
+}
+.fin_pag .cont_fin1 .fin_links a:nth-of-type(4){
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+.fin_pag .cont_fin2{
+    padding: 1rem;
+    display: grid;
+    text-align: center;
+}
+.fin_pag .cont_fin2 .fin_enclaces{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 1rem;
+}
+
+.fin_pag .cont_fin2 .fin_enclaces a{
+    text-decoration: none;
+    color: black;
+    transition: all 0.5s ease;
+}
+.fin_pag .cont_fin2 .fin_enclaces a:hover{
+    text-decoration: underline;
+    color: #109090;
+}
+.fin_pag .cont_fin4{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    grid-gap: 1rem;
+}
+.fin_pag .cont_fin4 img{
+    width: 70%;
+}
+.fin_pag .cont_fin4 .cont_fin4_contactos{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+.fin_pag .cont_fin4 .cont_fin4_contactos h3,
+.fin_pag .cont_fin4 .cont_fin4_contactos span{
+    width: 100%;
+    padding: 5px;
+}
+
+
+.fin_pag1{
+    width: 100%;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+/*-------parte responsive*/
+/*responsive para la parte de header o menu*/
+@media only screen and (max-width:1500px){
+    .modal_enlaces .cont_modal_enlaces{
+        width: 70%;
+    }
+}
+@media only screen and (max-width:1400px){
+    .modal_flujograma .cont_modal_flujograma{
+        width: 45%;
+    }
+}
+@media only screen and (max-width:1350px){
+    .encabezado .cont_en:nth-of-type(3){
+        display: none;
+    }
+}
+@media only screen and (max-width:1460px){
+    .personal .cont_personal .servicos{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .ubicacion .ubc_info .ubic{
+        width: 60%;
+    }
+    .ubicacion .ubc_info .ubic2{
+        width: 40%;
+    }
+    .fin_pag .cont_fin1{
+        width: 50%;
+    }
+    .fin_pag .cont_fin4{
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width:1300px){
+    .personal .cont_personal .servicos{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .seccion_videos .contvideos .contvideo{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .ubicacion .ubc_info .ubic{
+        width: 65%;
+    }
+    .ubicacion .ubc_info .ubic2{
+        width: 35%;
+    }
+}
+@media only screen and (max-width:1280px){
+    .modal_flujograma .cont_modal_flujograma{
+        width: 50%;
+    }
+    .modal_horario .cont_modal_horario{
+        width: 70%;
+    }
+}
+@media only screen and (max-width:1200px){
+    .modal_enlaces .cont_modal_enlaces{
+        width: 80%;
+    }
+}
+@media only screen and (max-width:1060px){
+    .modal_flujograma .cont_modal_flujograma{
+        width: 60%;
+    }
+}
+@media only screen and (max-width:1150px){
+    .encabezado .cont_en{
+        display: none;
+    }
+    header{
+        display: none;
+    }
+    .opcion_pagina .cont_opcion_pagina{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .sub_menu{
+        display: flex;
+        background-color: transparent;
+        border: none;
+    }
+    .encabezado{
+        position: sticky;
+        top: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 50;
+    }
+    .encabezado .cont_encavezado{
+        background-color: transparent;
+        border: none;
+    }
+    /*responsiver de la parte de descripcion del CSMC*/
+    .info .cont_info{
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .info .cont_info .cont_info_text{
+        width: 100%;
+    }
+    .info .cont_info .cont_info_img{
+        width: 100%;
+    }
+    /*responsive de la parte de estadistica*/
+    .estadistica .cont_esta .cont_estadis_descrip{
+        flex-direction: column;
+    }
+    .estadistica .cont_esta .cont_estadis_descrip .contestades1{
+        width: 100%;
+    }
+    .estadistica .cont_esta .cont_estadis_descrip .contestades2{
+        width: 100%;
+    }
+    .estadistica .cont_esta .cont_estadis_descrip .contestades1 .cont_img_icon img{
+        width: 100%;
+        height: 25vw; 
+    }
+}
+@media only screen and (max-width:1040px){
+    .personal .cont_personal .servicos{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .seccion_videos .contvideos .contvideo{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .ubicacion .ubc_info{
+        flex-direction: column;
+    }
+    .ubicacion .ubc_info .ubic,
+    .ubicacion .ubc_info .ubic2{
+        width: 100%;
+    }
+}
+@media only screen and (max-width:900px){
+    .modal_flujograma .cont_modal_flujograma{
+        width: 75%;
+    }
+    .modal_enlaces .cont_modal_enlaces .cont_enlaces{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media only screen and (max-width:870px){
+    .fin_pag{
+        flex-direction: column;
+    }
+    .fin_pag .cont_fin1{
+        width: 100%;
+    }
+    .fin_pag .cont_fin2{
+        display: none;
+    }
+    .fin_pag .cont_fin4{
+        width: 100%;
+        align-items: normal;
+        flex-direction: row;
+    }
+    .fin_pag .cont_fin4 img{
+        width: 50%;
+    }
+    .modal_horario .cont_modal_horario{
+        width: 80%;
+    }
+}
+@media only screen and (max-width:730px){
+    .modal_flujograma .cont_modal_flujograma{
+        width: 80%;
+        height: 85%;
+    }
+}
+@media only screen and (max-width:660px){
+    .encabezado .cont_encavezado {
+        padding: 1rem 0 1rem 1rem;
+    }
+    .cont_encavezado .cont_nom{
+        width: 100%;
+        font-size: 15px;
+        text-align: center;
+    }
+    .personal .cont_personal .servicos{
+        grid-template-columns:  repeat(1,1fr);
+    }
+    .seccion_videos .contvideos .contvideo{
+        grid-template-columns: max-content;
+        justify-content: center;
+    }
+    .slider-frame{
+        height: 50vh;
+    }
+}
+@media only screen and (max-width:620px){
+    .modal_flujograma .cont_modal_flujograma{
+        width: 80%;
+        height: 72%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .modal_horario .cont_modal_horario{
+        width: 90%;
+    }
+    .modal_enlaces .cont_modal_enlaces{
+        width: 90%;
+    }
+}
+@media only screen and (max-width:500px){
+    .fin_pag .cont_fin4{
+        flex-direction: column;
+    }
+    .fin_pag .cont_fin4 img{
+        width: 70%;
+    }
+    .fin_pag .cont_fin4 .cont_fin4_contactos{
+        width: 100%;
+    }
+    .opcion_pagina .cont_opcion_pagina{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media only screen and (max-width:500px){
+    .modal_flujograma .cont_modal_flujograma{
+        width: 95%;
+        height: 68%;
+    }
+    .modal_horario .cont_modal_horario{
+        width: 95%;
+    }
+}
+@media only screen and (max-width:420px){
+    .modal_flujograma .cont_modal_flujograma{
+        width: 95%;
+        height: 60%;
+    }
+    .modal_enlaces .cont_modal_enlaces{
+        width: 95%;
+        height: 92%;
+        display: flex;
+        justify-content: center;
+    }
+    .modal_enlaces .cont_modal_enlaces .cont_enlaces{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+    }
+}
+@media only screen and (max-width:412px){
+    .modal_flujograma .cont_modal_flujograma{
+        width: 95%;
+        height: 55%;
+    }
+}
+.btn-pdf{
+    color: #fd1d1d;
+}

@@ -1,0 +1,578 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Courgette&family=Lobster&family=Pacifico&display=swap');
+
+:root{
+    --color-barra-lateral:rgb(255,255,255);
+
+    --color-texto:rgb(0,0,0);
+    --color-texto-menu: rgb(255, 255, 255);
+    /*desiganammos colores para cuando pase el mause cambie de color "horver"*/
+    --color-hover-a: rgb(197, 197, 197) ;
+    --color-hover-texto-a:rgb(0,0,0);
+    /*color del boton para añadir usuarios*/
+    --color-boton:rgb(0,0,0);
+    --color-boton-texto:rgb(255,255,255);
+    /*color de la linea de separacion*/
+    --color-liena:rgb(255, 255, 255);
+    /*color del boton desplegable*/
+    --color-switch-base:rgb(179, 179, 179);
+    --color-switch-circulo:rgb(241, 241, 241);
+    /*color scrollbar del menu*/
+    --color-scrollbar:rgb(255, 255, 255);
+    --color-scrollbar-horver:rgb(0, 0, 0);
+
+    /*color del boton hover*/
+    --color-btn-hover: rgb(255, 253, 253);
+    --color-btn-text-hover: rgb(0,0,0);
+    --color-btn-border-hover: rgb(0,0,0);
+    /*color de fondo */
+    --color-fondo:#ffffff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Concert One', sans-serif;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: #F2F1F8;
+}
+/*_------------------------menun*/
+.menu{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    font-size: 28px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    right: 15px;
+    top:  15px;
+    background-color: var(--color-boton);
+    color: var(--color-boton-texto);
+    z-index: 100;
+}
+/*------------------barra lateral*/
+.barra_lateral{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    height: 100%;
+    padding: 20px 15px;
+    background-color: rgb(19, 209, 209);
+    overflow: hidden;
+    transition: width 0.5s ease, left 0.5s ease;
+    z-index: 50;
+    border-right: 2px solid black ;
+}
+
+.mini_barra_lateral{
+    width: 80px;
+}
+.barra_lateral span{
+    white-space: nowrap;
+    font-size: 20px;
+    text-align: left;
+    opacity: 1;
+    transition: opacity 0.5s ease, width 0.5s ease;
+}
+.barra_lateral span.oculto{
+    opacity: 0;
+    width: 0;
+}
+/*--------------------nombre de la pagina*/
+.barra_lateral .nombre_pagina{
+    width: 100%;
+    height: 45px;
+    color: var(--color-texto);
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.barra_lateral .nombre_pagina i{
+    min-width: 50px;
+    height: 45px;
+    font-size: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.barra_lateral .nombre_pagina span{
+    margin-left: 5px;
+    font-size: 25px;
+}
+/*-----------------------estilo boton*/
+.barra_lateral a{
+    text-decoration: none;
+}
+.barra_lateral .btn{
+    cursor: pointer;
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--color-boton);
+    color: var(--color-boton-texto);
+    margin-bottom: 30px;
+}
+.barra_lateral .btn:hover{
+    background-color: var(--color-btn-hover);
+    color: var(--color-btn-text-hover);
+    border: 2px solid var(--color-btn-border-hover);
+}
+.barra_lateral .btn i{
+    min-width: 50px;
+    font-size: 25px;
+}
+
+
+/*------------------------menu de navegacion*/
+.barra_lateral .navegacion{
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.barra_lateral .navegacion::-webkit-scrollbar{
+    width: 4px;
+}
+.barra_lateral .navegacion::-webkit-scrollbar-thumb{
+    background-color: var(--color-scrollbar);
+    border-radius: 5px;
+}
+.barra_lateral .navegacion::-webkit-scrollbar-thumb:hover{
+    background-color: var(--color-scrollbar-horver);
+}
+
+.barra_lateral .navegacion li,
+.barra_lateral .cerrar_sesion li{
+    list-style: none;
+    display: flex;
+    margin-bottom: 20px;
+}
+.barra_lateral .navegacion a,
+.barra_lateral .cerrar_sesion a{
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    color: var(--color-texto-menu);
+}
+.barra_lateral .navegacion a:hover,
+.barra_lateral .cerrar_sesion a:hover{
+    background-color: var(--color-hover-a);
+    color: var(--color-hover-texto-a);
+}
+.barra_lateral .navegacion i,
+.barra_lateral .cerrar_sesion i{
+    min-width: 50px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*-------------------linea de divicion*/
+.barra_lateral .linea_divicion{
+    width: 100%;
+    height: 4px;
+    background-color: var(--color-liena);
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+
+/*--------------------------------contenido despues de la barra de menu*/
+.contenido{
+    width: calc(100% - 300px);
+    margin-left: 300px;
+    transition: margin-left 0.5s ease, width 0.5s ease;
+    position: relative;
+    min-height: 100%;
+}
+.contenido.min_main{
+    margin-left: 80px;
+    width: calc(100% - 80px);
+    
+}
+
+/*-------------------------------encabezado - hearder*/
+.contenido header{
+    background-color: rgb(19, 209, 209);
+    width: 100%;
+    height: 130px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+.contenido header img{
+    max-width: 100%;
+    height: 80px;
+}
+.contenido header .img_1{
+    margin-left: 2rem;
+}
+.contenido header .img_2{
+    margin-right: 2rem;
+}
+.contenido header small{
+    font-size: 20px;
+}
+
+/*---------------------------main*/
+/*subtitulño donde se da la bienvenida*/
+.sub_tit1 {
+    padding: 1.3rem 1rem;
+    text-align: center;
+    color: var(--color-texto);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    grid-gap: 1rem;
+    font-size: 25px;
+    font-weight: 600;
+}
+/*contenido de los documentos*/
+.documentos{
+    width: 100%;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.documentos .tit_docs{
+    width: 70%;
+}
+.documentos .tit_docs h2{
+    text-align: center;
+}
+.documentos .tit_docs button{
+    padding: 0.5rem;
+    border-radius: 7px;
+    background-color: rgb(64, 64, 248);
+    color: white;
+    border: 2px solid rgb(64, 64, 248);
+    font-size: 15px;
+    margin: 10px 0;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+.documentos .tit_docs button:hover{
+    background-color: white;
+    color: blue;
+}
+.documentos .cont_doc{
+    width: 60%;
+    display: flex;
+    margin-bottom: 5px;
+}
+.documentos .cont_doc .doc_tabla,
+.documentos .cont_doc .doc_tabla_mostrar{
+    border: 2px solid green;
+    padding: 0.5rem;
+}
+.documentos .cont_doc .doc_tabla:nth-of-type(1){
+    width: 70%;
+    border-right: none;
+    border-radius: 7px 0 0 7px;
+    text-align: center;
+}
+.documentos .cont_doc .doc_tabla:nth-of-type(2){
+    width: 30%;
+    border-radius: 0 7px 7px 0;
+    text-align: center;
+}
+.documentos .cont_doc .doc_tabla_mostrar:nth-of-type(1) {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    border-right: none;
+    border-radius: 7px 0 0 7px;
+}
+.documentos .cont_doc .doc_tabla_mostrar:nth-of-type(1) span{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: normal;
+    display: block;
+}
+.documentos .cont_doc .doc_tabla_mostrar:nth-of-type(2){
+    width: 30%;
+    border-radius: 0 7px 7px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 0.5rem;
+}
+.documentos .cont_doc .doc_tabla_mostrar:nth-of-type(2) a{
+    border: 2px solid blue;
+    padding: 0.25rem ;
+    text-decoration: none;
+    border-radius: 7px;
+    color: white;
+    background-color: blue;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    text-align: center;
+}
+.documentos .cont_doc .doc_tabla_mostrar:nth-of-type(2) a:hover{
+    background-color: white;
+    color: blue;
+}
+.documentos .cont_doc .doc_tabla_mostrar:nth-of-type(2) button{
+    padding: 0.25rem;
+    border: 2px solid red;
+    border-radius: 7px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    background-color: red;
+    transition: all 0.5s ease;
+}
+.documentos .cont_doc .doc_tabla_mostrar:nth-of-type(2) button:hover{
+    background-color: white;
+    color: red;
+}
+/*modal para subir documentos*/
+.modal_docs {
+    background-color: rgb(0, 0, 0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 51;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: left 0.5s ease;
+    visibility: hidden;
+}
+.modal_docs.mostrar{
+    visibility: visible;
+}
+.modal_docs .cont_modal_docs{
+    position: absolute;
+    width: 40%;
+    background-color: #f1f4f9;
+    border-radius: 15px;
+    padding: 1rem;
+    overflow: hidden;
+
+    transition: 0.5s ease all;
+	transform: scale(0.7);
+    opacity: 0;
+}
+.modal_docs .cont_modal_docs.mostrar{
+    transform: scale(1); 
+    opacity: 1;
+}
+/*btn cerrar modal*/
+.modal_docs .cont_modal_docs .cerrar_modal_docs{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    font-size: 20px;
+}
+/*modal estilos --------------------*/
+.modal_docs .cont_modal_docs h2{
+    text-align: center;
+    margin-bottom: 18px;
+}
+.modal_docs .cont_modal_docs form{
+    display: grid;
+    grid-gap: 1rem;
+}
+.modal_docs .cont_modal_docs h4{
+    font-size: 18px;
+}
+.modal_docs .cont_modal_docs input{
+    display: none;
+}
+.modal_docs .cont_modal_docs input + label{
+    display: flex;
+    overflow: hidden;
+}
+.modal_docs .cont_modal_docs  .imagen_name{
+    border: 1px solid rgb(38, 38, 38);
+    background: white;
+    padding: 0.5rem;
+    width: 70%;
+    border-radius: 10px 0 0 10px;
+}
+.modal_docs .cont_modal_docs  .imagen_name .subir_nombre{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: normal;
+    display: block;
+}
+.modal_docs .cont_modal_docs .imagen_boton{
+    width: 30%;
+    background: white;
+    color: rgb(19, 209, 209);
+    cursor: pointer;
+    white-space: nowrap;
+    align-items: center;
+    display: flex;
+    border-radius: 0 10px 10px 0;
+    border: 1px solid rgb(19, 209, 209);
+    justify-content: center;
+    transition: all 0.5s ease;
+    font-size: 13px;
+}
+.modal_docs .cont_modal_docs .imagen_boton:hover{
+    background-color: rgb(19, 209, 209) ;
+    color: white;
+}
+.modal_docs .cont_modal_docs .imagen_boton i{
+    min-width: 40px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+
+.modal_docs .cont_modal_docs .button1{
+    display: flex;
+    justify-content: center;
+}
+.modal_docs .cont_modal_docs button{
+    padding: 0.5rem;
+    border: 2px solid blue;
+    background-color: white;
+    color: blue;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.modal_docs .cont_modal_docs button:hover{
+    background-color: blue;
+    color: white;
+}
+
+
+/*--------responsive para el header del contenido*/
+
+@media only screen and (max-width: 1495px){
+    .documentos .cont_doc{
+        width: 70%;
+    }
+}
+@media only screen and (max-width: 1330px){
+    .documentos .cont_doc{
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 1200px){
+    .documentos .cont_doc{
+        width: 90%;
+    }
+    .modal_docs .cont_modal_docs{
+        width: 60%;
+    }
+}
+@media only screen and (max-width: 1100px){
+    .documentos .cont_doc{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 1020px){
+    .contenido header{
+        display: none;
+    }
+    .documentos .cont_doc .doc_tabla:nth-of-type(1),
+    .documentos .cont_doc .doc_tabla_mostrar:nth-of-type(1){
+        width: 60%;
+    }
+    .documentos .cont_doc .doc_tabla:nth-of-type(2),
+    .documentos .cont_doc .doc_tabla_mostrar:nth-of-type(2){
+        width: 40%;
+    }
+}
+@media only screen and (max-width: 850px){
+    .documentos .cont_doc .doc_tabla:nth-of-type(1),
+    .documentos .cont_doc .doc_tabla_mostrar:nth-of-type(1){
+        width: 50%;
+    }
+    .documentos .cont_doc .doc_tabla:nth-of-type(2),
+    .documentos .cont_doc .doc_tabla_mostrar:nth-of-type(2){
+        width: 50%;
+    }
+    .modal_docs .cont_modal_docs{
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 510px){
+    .modal_docs .cont_modal_docs{
+    width: 100%;
+}
+}
+/*-----------------------------------responsive*/
+@media (max-height: 660px){
+    .barra_lateral .nombre_pagina{
+        margin-bottom: 5px;
+    }
+    .barra_lateral .modo_oscuro,
+    .barra_lateral .linea_divicion{
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+    .barra_lateral .usuario{
+        margin-top: 1px;
+    }
+}
+@media (max-width:650px){
+    .barra_lateral{
+        position: fixed;
+        left: -300px;
+    }
+    .menu{
+        display: flex;
+    }
+    /*el max_barra_lateral se utilizara para que se vuelva a mostrar la barra de menu*/
+    .max_barra_lateral{
+        left:0;
+    }
+    /*este codigo nos permitira cambiar de icono del menu*/
+    .menu i:nth-child(2){
+        display: none;
+    }
+    .contenido {
+        margin-left: 0;
+        width: 100%;
+    }
+    .contenido.min_main{
+        margin-left: 0;
+        width: 100%;
+    }
+}

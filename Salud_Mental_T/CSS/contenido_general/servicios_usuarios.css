@@ -1,0 +1,1005 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Protest+Revolution&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Protest+Revolution&family=Protest+Riot&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Pacifico&family=Protest+Revolution&family=Protest+Riot&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rowdies:wght@300;400;700&family=Workbench&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Pacifico&family=Protest+Revolution&family=Protest+Riot&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rowdies:wght@300;400;700&family=Workbench&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f1f4f9;
+}
+/*encavezaod superior*/
+.encabezado{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.cont_encavezado{
+    display: flex;
+    grid-gap: 1rem;
+    padding: 1.25rem 2rem;
+    background-color: #f1f4f9;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+.cont_encavezado .cont_img img {
+    width: 80px;
+    box-shadow: 0px 5px 5px -5px rgb(0 0 0 / 10%);
+    background: #fff;
+    border-radius: 5px;
+    padding: 0.2rem;
+}
+.cont_encavezado .cont_nom {
+    box-shadow: 0px 5px 5px -5px rgb(0 0 0 / 10%);
+    background: #fff;
+    border-radius: 5px;
+    padding: 0.5rem;
+    font-family: "Pacifico", cursive;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 20px;
+}
+.cont_encavezado .cont_en{
+    height: 80px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 5px 5px -5px rgb(0 0 0 / 10%);
+    background: #fff;
+    border-radius: 5px;
+}
+.cont_encavezado .cont_en a{
+    text-decoration: none;
+    color: rgb(22, 226, 226);
+}
+.cont_encavezado .cont_en i{
+    min-width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+.cont_encavezado .cont_en .cont_encabe{
+    width: 100%;
+    height: 55px;
+    font-family: "Pacifico", cursive;
+}
+/*apartado del responsive donde se genara un boton de submenu*/
+.sub_menu{
+    padding: 1.25rem 2rem;
+    background-color: #f1f4f9;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid black;
+    display: none;
+}
+.encabezado .sub_menu i{
+    background-color: #fff;
+    font-size: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px -5px rgb(0 0 0 / 10%);
+    height: 100%;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+/*barra de menu----------------------------*/
+header{
+    position: sticky;
+    padding: .5rem 1rem;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+.cont_menu {
+    padding: .5rem 1rem;
+    flex: 1;
+    font-family: "Protest Riot", sans-serif;
+    display: flex;
+    align-items: center;
+    grid-gap: 1rem;
+}
+.cont_menu a{
+    text-decoration: none;
+    color: black;
+}
+.cont_menu .libro,
+.cont_menu .acceso{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+
+}
+.cont_menu .libro a,
+.cont_menu .acceso a{
+    border-radius: 8px;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 5px 5px -5px rgb(0 0 0 / 10%);
+    transition: all 0.5s ease;
+}
+.cont_menu .libro a i,
+.cont_menu .acceso a i{
+    min-width: 45px;
+    height: 45px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cont_menu .acceso a span{
+    min-width: 80px;
+    font-size: 20px;
+    padding-left:0.50rem ;
+}
+.cont_menu .libro a span{
+    min-width: 200px;
+    font-size: 17.5px;
+    padding-left: 0.6rem;
+}
+.cont_menu .libro a:hover,
+.cont_menu .acceso a:hover{
+    background-color: rgb(9, 177, 177);
+    color: white;
+}
+/*contenido de la navegacion*/
+.cont_menu nav{
+    width: 60%;
+    grid-gap: 0.5rem;
+    display: flex;
+}
+.cont_menu nav a{
+    width: 120px;
+    padding: .8rem 1rem;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 5px 5px -5px rgb(0 0 0 / 10%);
+    transition: all 0.5s ease;
+}
+.cont_menu nav a:nth-of-type(3){
+    background-color:rgb(28, 201, 201);
+    color: #fff;
+}
+.cont_menu nav a:nth-of-type(3):hover{
+    background-color:rgb(122, 238, 238);
+}
+.cont_menu nav a:hover{
+    background-color: rgb(28, 201, 201);
+    color: #fff;
+}
+/*----------------------------------------------contenido img fondo */
+.fondo{
+    font-family: "Rowdies", sans-serif;
+    width: 100%;
+    height: 22.5vh;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    background: url(../../img/fotos_csmc/servicios_salud.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: rgb(28, 201, 201);
+}
+.fondo h1{
+    position: absolute;
+    right: 11vh;
+    font-size: 50px;
+    text-align: center;
+}
+/*-----------------------------------------------contenido servicios */
+.cont_servicios{
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+.cont_servicios h1{
+    width: 85%;
+    font-family: "Rowdies", sans-serif;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 50px;
+}
+.cont_servicios h1:nth-of-type(1){
+    margin-top: 0;
+}
+.cont_servicios h1:nth-of-type(2){
+    margin-top: 30px;
+}
+.cont_servicios .servicios{
+    display: flex;
+    width: 85%;
+    grid-gap:1rem ;
+    align-items: center;
+    flex-direction: column;
+}
+.cont_servicios .servicios p{
+    font-family: "Roboto Slab", serif;
+    font-size: 13px;
+    color: #3f7a7a;
+}
+.cont_servicios .servicios .descr_servc{
+    width: 100%;
+    display: flex;
+    grid-gap: 1rem;
+    transition: all 0.5s ease;
+}
+.cont_servicios .servicios .descr_servc img{
+    width: 30%;
+    height: 37vh;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(130, 129, 129);
+    transition: all 0.5s ease;
+}
+.cont_servicios .servicios .descr_servc .descripcion{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    padding: 1rem 0 1rem 0;
+    width: 70%;
+    transition: all 0.5s ease;
+}
+/*codigo para el apartado de la funciones de los servicios*/
+.cont_servicios .servicios .descr_servc .descripcion1{
+    width: 70%;
+    transition: all 0.5s ease;
+}
+.cont_servicios .servicios .descr_servc .descripcion1 h3{
+    text-align: center;
+    font-family: "Rowdies", sans-serif;
+    padding-bottom: 10px;
+}
+.cont_servicios .servicios .descr_servc .descripcion1 .text_descrip{
+    display: flex;
+    grid-gap: 1rem;
+}
+.cont_servicios .servicios .descr_servc .descripcion1 .text_descrip ul{
+    margin-left: 20px;
+    text-align: justify;
+    width: 50%;
+}
+
+.cont_servicios .servicios .descr_servc:nth-of-type(1) .descripcion{
+    width: 100%;
+    height: 37vh;
+    grid-template-columns: repeat(6, 1fr);
+}
+.cont_servicios .servicios .descr_servc:nth-of-type(2) .descripcion,
+.cont_servicios .servicios .descr_servc:nth-of-type(4) .descripcion,
+.cont_servicios .servicios .descr_servc:nth-of-type(6) .descripcion,
+.cont_servicios .servicios .descr_servc:nth-of-type(8) .descripcion,
+.cont_servicios .servicios .descr_servc:nth-of-type(10) .descripcion{
+    padding: 0;
+    grid-template-columns: none;
+}
+.cont_servicios .servicios .descr_servc .descripcion .descrip_popup{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-gap: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(130, 129, 129);
+    transition: all .5s ease;
+    cursor: pointer;
+}
+.cont_servicios .servicios .descr_servc .descripcion .img_popup,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup1,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup2,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup3,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup4,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup5,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup6,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup7,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup8,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup9,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup10,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup11,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup12,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup13,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup14,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup15,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup16,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup17,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup18,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup19,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup20,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup21,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup22,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup23,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup24,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup25{
+    position: relative;
+    overflow: hidden;
+}
+.cont_servicios .servicios .descr_servc .descripcion .img_popup::before{
+    content: "";
+    display: block;
+    background-image: url(../../img/imgs_servicios/generales/img1.jfif);
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s ease;
+    z-index: -1;
+}
+.cont_servicios .servicios .descr_servc .descripcion .img_popup1::before{
+    content: "";
+    display: block;
+    background-image: url(../../img/imgs_servicios/generales/img2.jfif);
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s ease;
+    z-index: -1;
+    border-radius: 10px;
+}
+.cont_servicios .servicios .descr_servc .descripcion .img_popup2::before{
+    content: "";
+    display: block;
+    background-image: url(../../img/imgs_servicios/generales/img3.jfif);
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s ease;
+    z-index: -1;
+}
+.cont_servicios .servicios .descr_servc .descripcion .img_popup3::before{
+    content: "";
+    display: block;
+    background-image: url(../../img/imgs_servicios/generales/img4.jfif);
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s ease;
+    z-index: -1;
+}
+.cont_servicios .servicios .descr_servc .descripcion .img_popup4::before{
+    content: "";
+    display: block;
+    background-image: url(../../img/imgs_servicios/generales/img5.jfif);
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s ease;
+    z-index: -1;
+}
+.cont_servicios .servicios .descr_servc .descripcion .img_popup5::before{
+    content: "";
+    display: block;
+    background-image: url(../../img/imgs_servicios/generales/img6.jfif);
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s ease;
+    z-index: -1;
+}
+.cont_servicios .servicios .descr_servc .descripcion .img_popup6::before{
+    content: "";
+    display: block;
+    background-image: url(../../img/imgs_servicios/img_Adolescencia/adl1.jpeg);
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s ease;
+    z-index: -1;
+}
+.cont_servicios .servicios .descr_servc .descripcion .img_popup7::before{
+    content: "";
+    display: block;
+    background-image: url(../../img/imgs_servicios/img_Adolescencia/adl2.jpeg);
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s ease;
+    z-index: -1;
+}
+.cont_servicios .servicios .descr_servc .descripcion .img_popup8::before{
+    content: "";
+    display: block;
+    background-image: url(../../img/imgs_servicios/img_Adolescencia/adl3.jpeg);
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s ease;
+    z-index: -1;
+}
+.cont_servicios .servicios .descr_servc .descripcion .img_popup9::before{
+    content: "";
+    display: block;
+    background-image: url(../../img/imgs_servicios/img_Adolescencia/adl4.jpeg);
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s ease;
+    z-index: -1;
+}
+.cont_servicios .servicios .descr_servc .descripcion .img_popup10::before{
+    content: "";
+    display: block;
+    background-image: url(../../img/imgs_servicios/img_adulto/adul1.jfif);
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s ease;
+    z-index: -1;
+}
+.cont_servicios .servicios .descr_servc .descripcion .img_popup11::before{
+    content: "";
+    display: block;
+    background-image: url(../../img/imgs_servicios/img_adulto/adul2.jfif);
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s ease;
+    z-index: -1;
+}
+.cont_servicios .servicios .descr_servc .descripcion .img_popup12::before{
+    content: "";
+    display: block;
+    background-image: url(../../img/imgs_servicios/img_adulto/adul3.jfif);
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s ease;
+    z-index: -1;
+}
+.cont_servicios .servicios .descr_servc .descripcion .img_popup13::before{
+    content: "";
+    display: block;
+    background-image: url(../../img/imgs_servicios/img_adulto/adul4.jfif);
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s ease;
+    z-index: -1;
+}
+.cont_servicios .servicios .descr_servc .descripcion .img_popup14::before{
+    content: "";
+    display: block;
+    background-image: url(../../img/imgs_servicios/img_adicciones/adic1.jfif);
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s ease;
+    z-index: -1;
+}
+.cont_servicios .servicios .descr_servc .descripcion .img_popup15::before{
+    content: "";
+    display: block;
+    background-image: url(../../img/imgs_servicios/img_adicciones/adic2.jpg);
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s ease;
+    z-index: -1;
+}
+.cont_servicios .servicios .descr_servc .descripcion .img_popup16::before{
+    content: "";
+    display: block;
+    background-image: url(../../img/imgs_servicios/img_adicciones/adic3.jfif);
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s ease;
+    z-index: -1;
+}
+.cont_servicios .servicios .descr_servc .descripcion .img_popup17::before{
+    content: "";
+    display: block;
+    background-image: url(../../img/imgs_servicios/img_adicciones/adic4.jfif);
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s ease;
+    z-index: -1;
+}
+.cont_servicios .servicios .descr_servc .descripcion .img_popup18::before{
+    content: "";
+    display: block;
+    background-image: url(../../img/imgs_servicios/img_social/social1.jfif);
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s ease;
+    z-index: -1;
+}
+.cont_servicios .servicios .descr_servc .descripcion .img_popup19::before{
+    content: "";
+    display: block;
+    background-image: url(../../img/imgs_servicios/img_social/social2.jfif);
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s ease;
+    z-index: -1;
+}
+.cont_servicios .servicios .descr_servc .descripcion .img_popup20::before{
+    content: "";
+    display: block;
+    background-image: url(../../img/imgs_servicios/img_social/social3.jfif);
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s ease;
+    z-index: -1;
+}
+.cont_servicios .servicios .descr_servc .descripcion .img_popup21::before{
+    content: "";
+    display: block;
+    background-image: url(../../img/imgs_servicios/img_social/social4.jfif);
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s ease;
+    z-index: -1;
+}
+.cont_servicios .servicios .descr_servc .descripcion .img_popup22::before{
+    content: "";
+    display: block;
+    background-image: url(../../img/imgs_servicios/img_farmacia/far2.jfif);
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s ease;
+    z-index: -1;
+}
+.cont_servicios .servicios .descr_servc .descripcion .img_popup23::before{
+    content: "";
+    display: block;
+    background-image: url(../../img/imgs_servicios/img_farmacia/far1.jpg);
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s ease;
+    z-index: -1;
+}
+.cont_servicios .servicios .descr_servc .descripcion .img_popup24::before{
+    content: "";
+    display: block;
+    background-image: url(../../img/imgs_servicios/img_farmacia/far3.jfif);
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s ease;
+    z-index: -1;
+}
+.cont_servicios .servicios .descr_servc .descripcion .img_popup25::before{
+    content: "";
+    display: block;
+    background-image: url(../../img/imgs_servicios/img_farmacia/far4.jfif);
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s ease;
+    z-index: -1;
+}
+.cont_servicios .servicios .descr_servc .descripcion .img_popup:hover::before,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup1:hover::before,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup2:hover::before,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup3:hover::before,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup4:hover::before,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup5:hover::before,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup6:hover::before,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup7:hover::before,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup8:hover::before,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup9:hover::before,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup10:hover::before,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup11:hover::before,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup12:hover::before,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup13:hover::before,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup14:hover::before,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup15:hover::before,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup16:hover::before,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup17:hover::before,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup18:hover::before,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup19:hover::before,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup20:hover::before,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup21:hover::before,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup22:hover::before,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup23:hover::before,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup24:hover::before,
+.cont_servicios .servicios .descr_servc .descripcion .img_popup25:hover::before{
+    transform: scale(1.5); /* Ajusta el valor según el nivel de zoom que desees */
+}
+
+.cont_servicios .servicios .descr_servc .descripcion .descrip_popup span{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: "Rowdies", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 0, 0,0.5);
+    padding: 1rem;
+}
+
+/*----------------------------------------------------------*/
+/*----------------------------------------estilos de popups-*/
+.popup1{
+    background-color: rgba(146, 143, 143, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: left 0.5s ease;
+    visibility: hidden;
+}
+
+.popup1.mostrar{
+    visibility: visible;
+}
+
+.popup1 .cont_popup1{
+    position: absolute;
+    width: 70%;
+    height: 60%;
+    background-color: #f1f4f9;
+    border-radius: 15px;
+    padding: 1.5rem;
+    overflow: hidden;
+
+    transition: 0.5s ease all;
+	transform: scale(0.7);
+    opacity: 0;
+}
+.popup1 .cont_popup1.mostrar{
+    transform: scale(1); 
+    opacity: 1;
+}
+.popup1 .cont_popup1 .cerrar_popup1{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    font-size: 20px;
+}
+/*en esta parte es el estilo de todo el contenido de los popups*/
+.info1{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    grid-gap: 1rem;
+}
+.info1 .info_ds{
+    border: 2px solid black;
+    padding: .5rem;
+    width: 50%;
+    height: 100%;
+}
+.info1 .info_ds h2{
+    font-family: "Rowdies", sans-serif;
+    color: rgb(28, 201, 201);
+}
+.info1 .info_ds img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px -5px rgb(0 0 0 / 10%);
+}
+/*----------------------------------------------------------*/
+/*------------------------------------fin estilos de popups-*/
+
+/*----------------------------------------------pie de pagina*/
+footer{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.fin_pag{
+    width: 97.5%;
+    background-color: white;
+    box-shadow: 0px 5px 5px -5px rgb(0 0 0 / 10%);
+    padding: 1rem;
+    border-bottom: 1px solid black;
+    display: flex;
+    grid-gap: 1rem;
+    justify-content: space-between;
+}
+.fin_pag .cont_fin1{
+    width: 40%;
+    display: grid;
+    grid-gap: 1rem;
+}
+.fin_pag .cont_fin1 .cont_fin_img{
+    display: flex;
+    padding: 0 1rem 0 1rem;
+}
+.fin_pag .cont_fin1 .cont_fin_img img{
+    width: 15%;
+}
+.fin_pag .cont_fin1 .cont_fin_img .cont_fin_img1{
+    margin-left: 20px;
+    width: 100%;
+    font-size: 15px;
+    font-family: "Pacifico", cursive;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.fin_pag .cont_fin1 p{
+    padding: 0 1rem 0 1rem;
+}
+.fin_pag .cont_fin1 .fin_links{
+    display: flex;
+    grid-gap: 2rem ;
+    padding: 0 0 0 1rem;
+}
+.fin_pag .cont_fin1 .fin_links a{
+    min-width: 45px;
+    height: 40px;
+    display: flex;
+    font-size: 25px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 7px;
+    background-color: rgb(31, 221, 221);
+}
+.fin_pag .cont_fin1 .fin_links a:nth-of-type(1){
+    background-color: #405e9e;
+    color: white;
+}
+.fin_pag .cont_fin1 .fin_links a:nth-of-type(2){
+    background-color: #00acee;
+    color: white;
+}
+.fin_pag .cont_fin1 .fin_links a:nth-of-type(3){
+    background: linear-gradient(to right, #833ab4, #fd1d1d);
+    color: white;
+    font-size: 30px;
+}
+.fin_pag .cont_fin1 .fin_links a:nth-of-type(4){
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+.fin_pag .cont_fin2{
+    padding: 1rem;
+    display: grid;
+    text-align: center;
+}
+.fin_pag .cont_fin2 .fin_enclaces{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 1rem;
+}
+
+.fin_pag .cont_fin2 .fin_enclaces a{
+    text-decoration: none;
+    color: black;
+    transition: all 0.5s ease;
+}
+.fin_pag .cont_fin2 .fin_enclaces a:hover{
+    text-decoration: underline;
+    color: #109090;
+}
+.fin_pag .cont_fin4{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    grid-gap: 1rem;
+}
+.fin_pag .cont_fin4 img{
+    width: 70%;
+}
+.fin_pag .cont_fin4 .cont_fin4_contactos{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+.fin_pag .cont_fin4 .cont_fin4_contactos h3,
+.fin_pag .cont_fin4 .cont_fin4_contactos span{
+    width: 100%;
+    padding: 5px;
+}
+
+.fin_pag1{
+    width: 100%;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+/*parte responsive*/
+@media only screen and (max-width:1350px){
+    .encabezado .cont_en:nth-of-type(3){
+        display: none;
+    }
+}
+@media only screen and (max-width:1150px){
+    .encabezado .cont_en{
+        display: none;
+    }
+    header{
+        display: none;
+    }
+    .sub_menu{
+        display: flex;
+        background-color: transparent;
+        border: none;
+    }
+    .encabezado{
+        position: sticky;
+        top: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 50;
+    }
+    .encabezado .cont_encavezado{
+        background-color: transparent;
+        border: none;
+    }
+}
+@media only screen and (max-width:1051px){
+    .cont_servicios .servicios .descr_servc:nth-of-type(1) .descripcion{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .cont_servicios .servicios .descr_servc:nth-of-type(2),
+    .cont_servicios .servicios .descr_servc:nth-of-type(4),
+    .cont_servicios .servicios .descr_servc:nth-of-type(6),
+    .cont_servicios .servicios .descr_servc:nth-of-type(8),
+    .cont_servicios .servicios .descr_servc:nth-of-type(10){
+        flex-direction: column;
+        align-items: center;
+    }
+    .cont_servicios .servicios .descr_servc img{
+        width: 40%;
+    }
+    .cont_servicios .servicios .descr_servc .descripcion1{
+        width: 100%;
+    }
+
+    .cont_servicios .servicios .descr_servc .descripcion{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media only screen and (max-width:940px){
+    .cont_servicios .servicios .descr_servc img{
+        width: 50%;
+    }
+    .cont_servicios .servicios .descr_servc{
+        flex-direction: column;
+        align-items: center;
+    }
+    .cont_servicios .servicios .descr_servc .descripcion{
+        height: 37vh;
+        width: 100%;
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+@media only screen and (max-width:870px){
+    .fin_pag{
+        flex-direction: column;
+    }
+    .fin_pag .cont_fin1{
+        width: 100%;
+    }
+    .fin_pag .cont_fin2{
+        display: none;
+    }
+    .fin_pag .cont_fin4{
+        width: 100%;
+        align-items: normal;
+        flex-direction: row;
+    }
+    .fin_pag .cont_fin4 img{
+        width: 50%;
+    }
+}
+@media only screen and (max-width:780px){
+    .cont_servicios .servicios .descr_servc:nth-of-type(1) .descripcion{
+        grid-template-columns: repeat(2, 1fr);
+        height: 55vh;
+    }
+    .cont_servicios .servicios .descr_servc .descripcion{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media only screen and (max-width:660px){
+    .encabezado .cont_encavezado {
+        padding: 1rem 0 1rem 1rem;
+    }
+    .cont_encavezado .cont_nom{
+        width: 100%;
+        font-size: 15px;
+        text-align: center;
+    }
+    .cont_servicios .servicios .descr_servc img{
+        width: 70%;
+    }
+    .cont_servicios .servicios .descr_servc .descripcion1 .text_descrip{
+        flex-direction: column;
+        grid-gap: 0;
+    }
+    .cont_servicios .servicios .descr_servc .descripcion1 .text_descrip ul{
+        width: 95%;
+    }
+}
+@media only screen and (max-width:520px){
+    .cont_servicios .servicios .descr_servc img{
+        width: 80%;
+    }
+}
+@media only screen and (max-width:500px){
+    .fin_pag .cont_fin4{
+        flex-direction: column;
+    }
+    .fin_pag .cont_fin4 img{
+        width: 70%;
+    }
+    .fin_pag .cont_fin4 .cont_fin4_contactos{
+        width: 100%;
+    }
+}
+@media only screen and (max-width:440px){
+    .cont_servicios .servicios .descr_servc img{
+        width: 100%;
+    }
+}
